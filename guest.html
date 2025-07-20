@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Guests - CouponKart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 20px 10px;
+      color: #333;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    .container {
+      padding: 20px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .content:hover {
+      transform: scale(1.03);
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #5d00ff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #fff;
+      border: 4px solid #5d00ff;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .right::after {
+      left: -10px;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #5d00ff;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .guest-name {
+      font-weight: bold;
+      color: #5d00ff;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .guest-msg {
+      font-size: 15px;
+      color: #444;
+      margin-top: 6px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline::after {
+        left: 30px;
+      }
+
+      .left, .right {
+        left: 0;
+      }
+
+      .container::after {
+        left: 18px;
+      }
+
+      .content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-pic {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Guests</h1>
+
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <img class="profile-pic" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Amit">
+        <div class="text">
+          <p class="guest-name">Ranu Singh</p>
+          <p class="guest-msg">Amazing deals and smooth experience. CouponKart made savings fun!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <img class="profile-pic" src="https://randomuser.me/api/portraits/women/2.jpg" alt="Priya">
+        <div class="text">
+          <p class="guest-name">Priya Verma</p>
+          <p class="guest-msg">Flipkart coupons worked flawlessly. Will come back again!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <img class="profile-pic" src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rahul">
+        <div class="text">
+          <p class="guest-name">Sanny Singh</p>
+          <p class="guest-msg">Loved the UI and ease of selling my unused coupons. Thanks!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <img class="profile-pic" src="https://randomuser.me/api/portraits/women/4.jpg" alt="Meena">
+        <div class="text">
+          <p class="guest-name">Somya Thakur</p>
+          <p class="guest-msg">Super responsive team and great offers. Highly recommended!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <img class="profile-pic" src="Owner.jpg" alt="Saurabh">
+        <div class="text">
+          <p class="guest-name">Saurabh Singh</p>
+          <p class="guest-msg">Proud to offer a platform people trust and enjoy using!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

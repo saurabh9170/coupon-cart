@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page with Animations</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #4e54c8;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 12px 12px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      color: #999;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.3s ease all;
+      background-color: white;
+      padding: 0 4px;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 8px;
+      color: #4e54c8;
+      font-size: 12px;
+    }
+
+    .form-group input:focus {
+      border-color: #4e54c8;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+    }
+
+    .btn {
+      width: 100%;
+      background-color: #4e54c8;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3c42aa;
+    }
+
+    .success-msg {
+      text-align: center;
+      color: green;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form onsubmit="event.preventDefault(); showMessage();">
+      <div class="form-group">
+        <input type="text" id="name" placeholder=" " required />
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="number" id="age" placeholder=" " required />
+        <label for="age">Age</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required />
+        <label for="password">Password</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirm-password" placeholder=" " required />
+        <label for="confirm-password">Confirm Password</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <label>I agree to the Terms & Conditions</label>
+      </div>
+
+      <button class="btn" type="submit">Register</button>
+
+      <div class="success-msg" id="success">🎉 Registration Successful!</div>
+    </form>
+  </div>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('success');
+      msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

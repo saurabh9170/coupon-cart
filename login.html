@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - CouponKart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .login-container h1 span {
+      font-size: 1.8rem;
+    }
+
+    .login-container p {
+      color: #444;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .forgot {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .login-btn {
+      background-color: #f0547a;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #d9436a;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      background: white;
+    }
+
+    .social-btn img {
+      width: 20px;
+      margin-right: 12px;
+    }
+
+    .social-btn.facebook {
+      color: #3b5998;
+    }
+
+    .social-btn.apple {
+      color: #000;
+    }
+
+    .social-btn.google {
+      color: #db4437;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+
+    .signup-link a {
+      color: #f0547a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>WELCOME BACK! 👋</h1>
+    <p>Keep your rewarding journey going!</p>
+
+    <input type="text" placeholder="Mobile Number / Email">
+    <input type="password" placeholder="Password">
+
+    <div class="forgot">Forgot Password?</div>
+
+    <button class="login-btn">Log In</button>
+
+    <div class="social-btn facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+      Continue With Facebook
+    </div>
+
+    <div class="social-btn apple">
+      <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple">
+      Continue With Apple
+    </div>
+
+    <div class="social-btn google">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
+      Continue With Google
+    </div>
+
+    <div class="signup-link">
+      Don’t have an account? <a href="/signup.html">Sign Up</a>
+    </div>
+  </div>
+<script>
+  // Show/Hide Password Toggle
+  const passwordField = document.querySelector('input[type="password"]');
+
+  // Add eye icon dynamically
+  const eyeIcon = document.createElement('span');
+  eyeIcon.innerHTML = '👁️';
+  eyeIcon.style.position = 'absolute';
+  eyeIcon.style.right = '20px';
+  eyeIcon.style.top = '50%';
+  eyeIcon.style.transform = 'translateY(-50%)';
+  eyeIcon.style.cursor = 'pointer';
+
+  const passwordWrapper = document.createElement('div');
+  passwordWrapper.style.position = 'relative';
+
+  // Wrap the password input in a div to insert eye icon
+  passwordField.parentNode.insertBefore(passwordWrapper, passwordField);
+  passwordWrapper.appendChild(passwordField);
+  passwordWrapper.appendChild(eyeIcon);
+
+  let showPassword = false;
+  eyeIcon.addEventListener('click', () => {
+    showPassword = !showPassword;
+    passwordField.type = showPassword ? 'text' : 'password';
+    eyeIcon.innerHTML = showPassword ? '🙈' : '👁️';
+  });
+
+  // Login Button Click
+  const loginBtn = document.querySelector('.login-btn');
+  loginBtn.addEventListener('click', () => {
+    const email = document.querySelector('input[type="text"]').value.trim();
+    const password = document.querySelector('input[type="password"]').value.trim();
+
+    if (email === '' || password === '') {
+      alert('Please fill in both email and password.');
+    } else {
+      alert('Logging in...');
+      // Here, insert your login API call or redirect logic
+    }
+  });
+
+  // Social Buttons
+  document.querySelector('.facebook').addEventListener('click', () => {
+    alert('Redirecting to Facebook login...');
+  });
+
+  document.querySelector('.apple').addEventListener('click', () => {
+    alert('Redirecting to Apple login...');
+  });
+
+  document.querySelector('.google').addEventListener('click', () => {
+    alert('Redirecting to Google login...');
+  });
+</script>
+
+</body>
+</html>

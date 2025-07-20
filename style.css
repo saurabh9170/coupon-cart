@@ -1,0 +1,274 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+      background-color: #161618;
+      color: white;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #ff4081;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #0d0d0e;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      min-height:fit-content;
+      width:auto;
+    }
+
+    .hero input {
+      padding: 10px;
+      width: 250px;
+      margin-top: 20px;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    /* Steps Section */
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: white;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      text-align: center;
+      max-width: 200px;
+      margin: 10px;
+    }
+
+    .step img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      background-color: #ff4081;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border-radius: 6px;
+      max-width: 300px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      .search-bar input {
+        width: 80%;
+      }
+
+      .steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+    }
+    .footer {
+      background-color: #f9f9f9;
+      padding: 40px 60px;
+      color: #333;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .footer-top div {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+
+    .footer-top h4 {
+      color: #2e3192;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .footer-top a {
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      margin-right: 8px;
+    }
+
+    .footer-top a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .footer-bottom div {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-bottom h4 {
+      color: #2e3192;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .footer-bottom a {
+      display: block;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 6px;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #000;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 32px;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .social-icons .facebook { background-color: #3b5998; }
+    .social-icons .x { background-color: #000; }
+    .social-icons .youtube { background-color: #ff0000; }
+    .social-icons .instagram { background-color: #e4405f; }
+    .social-icons .telegram { background-color: #0088cc; }
+
+    .app-download img {
+      max-width: 180px;
+      margin-top: 10px;
+    }
+    .customers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: rgb(237, 228, 228);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(132, 90, 90, 0.1);
+      transition: transform 0.5s ease;
+      color: black;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .location {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .feedback {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
