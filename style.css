@@ -272,3 +272,131 @@ body {
       color: #555;
       line-height: 1.5;
     }
+    /* Responsive Global Settings */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .search-bar input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero input {
+    width: 90%;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .footer-top div,
+  .footer-bottom div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-bottom ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .app-download {
+    text-align: center;
+  }
+
+  .note {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .search-bar input,
+  .hero input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .step img {
+    height: 50px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .feedback {
+    font-size: 13px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
